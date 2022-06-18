@@ -8,8 +8,7 @@ using namespace std;
 class cPiloto:
 	public cPersonal
 {
-protected:
-	cAvion* avion;
+
 public:
 #pragma region Constructor y destructor
 	cPiloto(string _nombre, string _apellido, int _DNI, int _codigoempleado);
@@ -18,7 +17,6 @@ public:
 
 #pragma region Metodos
 	void Imprimir();
-	cAvion* getavion();
 	void AnunciosAltavoz();
 	void PilotearAvion(cAvion*avion);
 	void PedirComidaoBebida(cAzafatas* azafata);

@@ -18,8 +18,8 @@ public:
 
 #pragma region Metodos
 	void Imprimir();
-	void AtenderLlamadosCliente(cPasajero*pj);
-	void AtenderLlamadosPiloto(cPiloto*p);
+	void AtenderLlamadosCliente(cPasajero*pasajero);
+	void AtenderLlamadosPiloto(cPiloto*piloto);
 	void EntregarComidayBebida(cPasajero*pasajero);
 	string to_string();
 #pragma endregion

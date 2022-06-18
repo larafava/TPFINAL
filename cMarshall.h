@@ -16,7 +16,7 @@ public:
 
 #pragma region Metodos
 	string to_string();
-	void arrebatopasajero(cPasajero*pasajero);
+	cPasajero* arrebatopasajero(cPasajero*pasajero);
 	void Imprimir();
 	
 };

@@ -139,6 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cAvion.cpp" />
+    <ClCompile Include="cAzafatas.cpp" />
+    <ClCompile Include="cCopiloto.cpp" />
+    <ClCompile Include="cEjecutivo.cpp" />
+    <ClCompile Include="cIata.cpp" />
+    <ClCompile Include="cMarshall.cpp" />
+    <ClCompile Include="cPasajero.cpp" />
+    <ClCompile Include="cPersona.cpp" />
+    <ClCompile Include="cPersonal.cpp" />
+    <ClCompile Include="cPiloto.cpp" />
+    <ClCompile Include="cPrimeraClase.cpp" />
+    <ClCompile Include="cTurista.cpp" />
     <ClCompile Include="TPFINAL.cpp" />
   </ItemGroup>
   <ItemGroup>

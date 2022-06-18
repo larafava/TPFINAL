@@ -19,6 +19,5 @@ public:
 	bool esprimeraclase();
 	void Imprimir();
 	void generarcodigo();
-	string to_string();
 	void TrabajarNotebook();
 };

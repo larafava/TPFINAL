@@ -13,13 +13,12 @@ public:
 #pragma endregion
 
 #pragma region Metodos
-	bool esturista();
+	//bool esturista();
 	bool esejecutivo();
-	bool esprimeraclase();
+	//bool esprimeraclase();
 	void Imprimir();
 	void HacerseMasaje(cAzafatas*azafata);
 	void PedirChampagne(cAzafatas*azafata);
-	//string to_string();
 	void generarcodigo();
 #pragma endregion
 };

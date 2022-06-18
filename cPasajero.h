@@ -10,7 +10,7 @@ class cPasajero:
 {
 protected:
 	string codigo;
-	cAvion* avionasociado;
+	
 public:
 #pragma region Constructor y destructor
 	cPasajero(string _nombre, string _apellido, int _DNI, string _codigo);
@@ -19,13 +19,11 @@ public:
 
 #pragma region Metodos
 	string to_string();
-	cAvion* getavion();
-	void PresentarCodigo();
-	string getcodigo();
+	string PresentarCodigo();
 	void cometerdelito();
 	void Dormir();
 	void PedirComidayBebida(cAzafatas* azafata);
-	void LlamarAzafata(cAzafatas* a);
+	void LlamarAzafata(cAzafatas* azafata);
 	void IralBanioyVolver();
 
 #pragma region Virtual

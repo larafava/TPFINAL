@@ -115,14 +115,14 @@ int main()
 				}
 				if (rand() % 6 + 1 == 2) {
 					if (pasajero->esejecutivo()) {
-						cEjecutivo* aux2 = dynamic_cast<cEjecutivo*>(pasajero);
-						cAzafatas* azafata = aux2->getavion()->AsignarAzafata();//Guardo la azafata asignada del avion
-						azafata->AtenderLlamadosCliente(aux2); //las azafatas no tienen eventos por si mismas sino que atienden los eventos de los pasajeros y pilotos
-						aux2->PedirChampagne(azafata);
-						azafata->EntregarComidayBebida(aux2);
-						aux2->getavion()->insertarevento("El pasajero:" + aux2->to_string() + "pidio Champagne" + "Azafata asignada" + azafata->to_string()); //guardo los eventos que suceden con ejecutivo
-						aux2->HacerseMasaje(azafata);
-						aux2->getavion()->insertarevento("El pasajero:" + aux2->to_string() + "Pidio que le hagan masajes" + "Azafata asignada" + azafata->to_string());
+						cEjecutivo* ejecutivo = dynamic_cast<cEjecutivo*>(pasajero);
+						cAzafatas* azafata = ejecutivo->getavion()->AsignarAzafata();//Guardo la azafata asignada del avion
+						azafata->AtenderLlamadosCliente(ejecutivo); //las azafatas no tienen eventos por si mismas sino que atienden los eventos de los pasajeros y pilotos
+						ejecutivo->PedirChampagne(azafata);
+						azafata->EntregarComidayBebida(ejecutivo);
+						ejecutivo->getavion()->insertarevento("El pasajero:" + ejecutivo->to_string() + "pidio Champagne" + "Azafata asignada" + azafata->to_string()); //guardo los eventos que suceden con ejecutivo
+						ejecutivo->HacerseMasaje(azafata);
+						ejecutivo->getavion()->insertarevento("El pasajero:" + ejecutivo->to_string() + "Pidio que le hagan masajes" + "Azafata asignada" + azafata->to_string());
 					}
 				}
 				if (rand() % 6 + 1 == 3) {
@@ -171,12 +171,12 @@ int main()
 		/*for (posicion = 0; posicion < listapasajeroavion2->getCA(); posicion++) {
 			srand((unsigned)time(NULL));
 			cout << rand() % 5 +1 << endl; // rango desde 1 a 5
-		}*/ //Este codigo debe estar en la clase avion y no en el main por lo tanto no lo reutilizo para avion2
+		} *///Este codigo debe estar en la clase avion y no en el main por lo tanto no lo reutilizo para avion2
 
 		//libero memoria
 		delete iata; //se encarga de eliminar los aviones y a su vez se encarga de eliminar pasajeros, pilotos,copilotos, marshall y azafatas
 	}
-	catch (...) {
+		catch (...) {
 		cout << "Se produjo un error" << endl;
 	}
 }

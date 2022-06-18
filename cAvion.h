@@ -1,9 +1,14 @@
-#pragma once
+
+#ifndef CAVION_H
+#define CAVION_H
+
+
 #include <iostream>
 #include "cAzafatas.h"
 #include "cPasajero.h"
 #include <string>
 #include "cIata.h"
+#include "cCopiloto.h"
 
 using namespace std;
 
@@ -11,11 +16,12 @@ class cAvion {
 
 private: 
 	friend class cPasajero;
-	cIata* iata;
-	cLista<cAzafatas>* azafatas;
+#pragma region Creacion de listas con template
+	cLista<cPersonal>* ListaPersonal; 
 	cLista<cPasajero>* ListaPasajeros;
 	cLista<cPasajero>* ListaPasajerosdetenidos;
 	cLista<string>* evento;
+#pragma endregion
 public:
 #pragma region Constructor y destructor
 	cAvion();
@@ -28,7 +34,7 @@ public:
 	bool estadetenido(cPasajero*pasajero);
 	int AgregarPasajero(cPasajero* pasajero);
 	bool lugarprision();
-	cLista<cPasajero>* getlistapasajero();
+	cLista<cPasajero>* getlistapasajero() { return this->ListaPasajeros; };
 	void insertarevento(string eventos);
 	cMarshall* getmarshall();
 	cMarshall* AsignarMarshall();
@@ -44,3 +50,5 @@ public:
 	void RecibirCodigo(cPasajero*pasajero);// chequeo que este en la lista de codigos validos
 #pragma endregion
 };
+
+#endif

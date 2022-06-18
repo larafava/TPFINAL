@@ -16,6 +16,5 @@ public:
 #pragma region Metodos
 	void Imprimir();
 	void PedidoDespegueyAterrizaje();
-	string to_string();
 #pragma endregion
 };
