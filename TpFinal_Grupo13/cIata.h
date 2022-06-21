@@ -1,18 +1,17 @@
 #pragma once
 #include "cLista.h"
-#include <iostream>
-#include "cPasajero.h"
-#include "cMarshall.h"
 
-using namespace std;
+class cMarshall;
+class cPasajero;
+class cAvion;
 
 class cIata {
 private:
 	
 	cLista<string>* Listacodigo;
 //	cLista<cAvion>* ListaAvion;
-	
-	const int cantmaxaviones=100;
+	const int cantmaxaviones;
+
 public:
 	static int cantAviones;
 #pragma region Constructor y destructor

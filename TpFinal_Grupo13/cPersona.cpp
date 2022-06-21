@@ -7,3 +7,7 @@ cPersona::cPersona(string _nombre, string _apellido, int _DNI) {
 	this->apellido = _apellido;
 	this->DNI = _DNI;
 }
+
+cPersona::~cPersona()
+{
+}

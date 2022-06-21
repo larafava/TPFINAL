@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d0e2562f-6775-462a-8ad8-512650cfb662}</ProjectGuid>
-    <RootNamespace>TPFINAL</RootNamespace>
+    <ProjectGuid>{7253d6a5-5cef-4374-b1af-1fbcf1dfa6fa}</ProjectGuid>
+    <RootNamespace>TpFinalGrupo13</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,7 +151,7 @@
     <ClCompile Include="cPiloto.cpp" />
     <ClCompile Include="cPrimeraClase.cpp" />
     <ClCompile Include="cTurista.cpp" />
-    <ClCompile Include="TPFINAL.cpp" />
+    <ClCompile Include="TpFinal_Grupo13.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cAvion.h" />

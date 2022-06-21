@@ -1,8 +1,7 @@
 #pragma once
-#include <iostream>
 #include "cPasajero.h"
 
-using namespace std;
+class cAzafatas;
 
 class cEjecutivo :
 	public cPasajero {

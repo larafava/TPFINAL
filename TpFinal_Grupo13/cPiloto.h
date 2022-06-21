@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include "cPersonal.h"
-#include "cAvion.h"
 
 using namespace std;
+class cAzafatas;
 
 class cPiloto:
 	public cPersonal
@@ -11,14 +11,14 @@ class cPiloto:
 
 public:
 #pragma region Constructor y destructor
-	cPiloto(string _nombre, string _apellido, int _DNI, int _codigoempleado);
+	cPiloto(cAvion* _avion, string _nombre, string _apellido, int _DNI);
 	~cPiloto();
 #pragma endregion
 
 #pragma region Metodos
 	void Imprimir();
 	void AnunciosAltavoz();
-	void PilotearAvion(cAvion*avion);
+	void PilotearAvion(cAvion* avion);
 	void PedirComidaoBebida(cAzafatas* azafata);
 	string to_string();
 #pragma endregion

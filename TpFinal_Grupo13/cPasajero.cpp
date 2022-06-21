@@ -1,10 +1,15 @@
 #include "cPasajero.h"
+#include "cAzafatas.h"
 
 using namespace std;
 
 cPasajero::cPasajero(string _nombre, string _apellido, int _DNI, string _codigo):cPersona(_nombre,_apellido,_DNI) {
 	this->codigo = _codigo;
 }
+cPasajero::~cPasajero()
+{
+}
+
 void cPasajero:: Dormir() {
 	cout << "El pasajero esta durmiendo" << endl;
 }
@@ -26,4 +31,8 @@ string cPasajero::to_string() {
 
 string cPasajero:: PresentarCodigo() {
 	return this->codigo;
+}
+
+void cPasajero::cometerdelito()
+{
 }

@@ -7,12 +7,12 @@
 using namespace std;	
 
 #define TMAX 150
+
 template <class T1> //T1 tipo de lista
 class cLista
 {
 	T1 **lista;
 	unsigned int ca, t;
-
 
 public:
 	cLista(unsigned int T = TMAX); 

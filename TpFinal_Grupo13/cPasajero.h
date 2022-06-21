@@ -1,9 +1,7 @@
 #pragma once
 #include <iostream>
 #include "cPersona.h"
-#include "cAzafatas.h"
-
-using namespace std;
+class cAzafatas;
 
 class cPasajero:
 	public cPersona
@@ -32,4 +30,5 @@ public:
 	virtual bool esejecutivo() = 0;
 	virtual bool esprimeraclase() = 0;
 #pragma endregion
+
 };

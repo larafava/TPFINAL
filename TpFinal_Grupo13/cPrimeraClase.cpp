@@ -1,9 +1,21 @@
 #include "cPrimeraClase.h"
 
-using namespace std;
-
 cPrimeraClase::cPrimeraClase(string _nombre, string _apellido, int _DNI, string _codigo) :cPasajero(_nombre, _apellido, _DNI, _codigo) {
 
+}
+
+cPrimeraClase::~cPrimeraClase()
+{
+}
+
+bool cPrimeraClase::esturista()
+{
+	return false;
+}
+
+bool cPrimeraClase::esejecutivo()
+{
+	return false;
 }
 
 bool cPrimeraClase::esprimeraclase() {
@@ -15,4 +27,8 @@ void cPrimeraClase::TrabajarNotebook() {
 }
 void cPrimeraClase:: Imprimir() {
 	cout << to_string() << endl;
+}
+
+void cPrimeraClase::generarcodigo()
+{
 }

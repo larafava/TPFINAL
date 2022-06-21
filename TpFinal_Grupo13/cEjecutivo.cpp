@@ -1,9 +1,12 @@
 #include "cEjecutivo.h"
-
-using namespace std;
+#include "cAzafatas.h"
 
 cEjecutivo::cEjecutivo(string _nombre, string _apellido, int _DNI, string _codigo) :cPasajero(_nombre, _apellido, _DNI, _codigo) {
 
+}
+
+cEjecutivo::~cEjecutivo()
+{
 }
 
 bool cEjecutivo::esejecutivo() {
@@ -24,4 +27,8 @@ void cEjecutivo::PedirChampagne(cAzafatas* azafata) {
 	azafata->AtenderLlamadosCliente(this);
 	azafata->EntregarComidayBebida(this);
 	
+}
+
+void cEjecutivo::generarcodigo()
+{
 }

@@ -1,9 +1,16 @@
 #include "cAzafatas.h"
+#include "cPiloto.h"
 
-using namespace std;
+cAzafatas::cAzafatas(cAvion* _avion, string _nombre, string _apellido, int _DNI):cPersonal(_avion, _nombre, _apellido, _DNI){
 
-cAzafatas::cAzafatas(string _nombre, string _apellido, int _DNI, int _codigoempleado) :cPersonal(_nombre, _apellido, _DNI, _codigoempleado) {
+}
 
+cAzafatas::~cAzafatas()
+{
+}
+
+void cAzafatas::Imprimir()
+{
 }
 
 void cAzafatas::AtenderLlamadosCliente(cPasajero* pasajero)
@@ -19,4 +26,9 @@ void cAzafatas::AtenderLlamadosPiloto(cPiloto* piloto)
 void cAzafatas::EntregarComidayBebida(cPasajero* pasajero)
 {
 	pasajero->PedirComidayBebida(this);
+}
+
+string cAzafatas::to_string()
+{
+	return string();
 }

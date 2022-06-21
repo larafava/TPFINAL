@@ -1,7 +1,12 @@
 #include "cMarshall.h"
+#include "cAvion.h"
 
-cMarshall::cMarshall(string _nombre, string _apellido, int _DNI, int _codigoempleado) :cPersonal(_nombre, _apellido, _DNI, _codigoempleado) {
+cMarshall::cMarshall(cAvion* _avion, string _nombre, string _apellido, int _DNI) :cPersonal(_avion, _nombre, _apellido, _DNI) {
 
+}
+
+cMarshall::~cMarshall()
+{
 }
 
 string cMarshall::to_string()

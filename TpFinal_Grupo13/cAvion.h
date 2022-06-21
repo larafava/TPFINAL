@@ -4,13 +4,16 @@
 
 
 #include <iostream>
-#include "cAzafatas.h"
+#include "cLista.h"
 #include "cPasajero.h"
-#include <string>
-#include "cIata.h"
-#include "cCopiloto.h"
+//#include "cIata.h"
+//#include "cCopiloto.h"
 
-using namespace std;
+class cMarshall;
+class cAzafatas;
+class cCopiloto;
+class cPersonal;
+class cPiloto;
 
 class cAvion {
 
@@ -21,7 +24,9 @@ private:
 	cLista<cPasajero>* ListaPasajeros;
 	cLista<cPasajero>* ListaPasajerosdetenidos;
 	cLista<string>* evento;
+
 #pragma endregion
+
 public:
 #pragma region Constructor y destructor
 	cAvion();
@@ -32,7 +37,7 @@ public:
 	void checkin(); //chequea que todos los codigos sean correctos
 	void Agregarpasajerodetenido(cPasajero*pasajerodetenido);
 	bool estadetenido(cPasajero*pasajero);
-	int AgregarPasajero(cPasajero* pasajero);
+	void AgregarPasajero(cPasajero* pasajero);
 	bool lugarprision();
 	cLista<cPasajero>* getlistapasajero() { return this->ListaPasajeros; };
 	void insertarevento(string eventos);
@@ -41,7 +46,7 @@ public:
 	void aviondespegue();
 	cAzafatas* AsignarAzafata();
 	int AgregarAzafata(cAzafatas*azafatas);
-	void setPiloto(cPiloto*piloto);
+	void setPiloto(cPiloto* piloto);
 	void setCopiloto(cCopiloto* copiloto);
 	cPiloto* getPiloto(); 
 	cCopiloto* getCopiloto();

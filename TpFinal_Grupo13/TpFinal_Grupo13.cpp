@@ -1,7 +1,7 @@
-// TPFINAL.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+// TpFinal_Grupo13.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
 #include <iostream>
+/*
 #include "cTurista.h"
 #include "cEjecutivo.h"
 #include "cPrimeraClase.h"
@@ -13,14 +13,13 @@
 #include "cAvion.h"
 #include <stdlib.h>
 #include <ctime>
-
-using namespace std;
-
+*/
 
 int main()
 {
+	/*
 	//creo pasajeros, aviones, azafatas, pilotos y copilotos para implementar luego las funciones
-	try 
+	try
 	{
 		cout << "Imprimo los pasajeros: \n";
 		cTurista* pasajero1 = new cTurista("Pedro", "Lopez", 18436114, "TU1843611422A");
@@ -135,11 +134,11 @@ int main()
 				}
 				if (rand() % 6 + 1 == 4) {
 					pasajero->Dormir();
-					pasajero->getavion()->insertarevento("El pasajero:"+pasajero->to_string()+"Durmio");
+					pasajero->getavion()->insertarevento("El pasajero:" + pasajero->to_string() + "Durmio");
 				}
 				if (rand() % 6 + 1 == 5) {
 					pasajero->IralBanioyVolver();
-					pasajero->getavion()->insertarevento("El pasajero"+ pasajero->to_string()+"Fue al banio y volvio");
+					pasajero->getavion()->insertarevento("El pasajero" + pasajero->to_string() + "Fue al banio y volvio");
 				}
 				if (rand() % 6 + 1 == 6) {
 					cAzafatas* azafata = pasajero->getavion()->AsignarAzafata();
@@ -147,7 +146,7 @@ int main()
 					pasajero->LlamarAzafata(azafata);
 					pasajero->PedirComidayBebida(azafata);
 					azafata->EntregarComidayBebida(pasajero);
-					pasajero->getavion()->insertarevento("El pasajero:"+pasajero->to_string()+"Pidio comida y bebida"+"Azafata asignada"+azafata->to_string());
+					pasajero->getavion()->insertarevento("El pasajero:" + pasajero->to_string() + "Pidio comida y bebida" + "Azafata asignada" + azafata->to_string());
 				}
 			}
 		}
@@ -171,13 +170,15 @@ int main()
 		/*for (posicion = 0; posicion < listapasajeroavion2->getCA(); posicion++) {
 			srand((unsigned)time(NULL));
 			cout << rand() % 5 +1 << endl; // rango desde 1 a 5
-		} *///Este codigo debe estar en la clase avion y no en el main por lo tanto no lo reutilizo para avion2
+		}  //Este codigo debe estar en la clase avion y no en el main por lo tanto no lo reutilizo para avion2
 
 		//libero memoria
 		delete iata; //se encarga de eliminar los aviones y a su vez se encarga de eliminar pasajeros, pilotos,copilotos, marshall y azafatas
 	}
-		catch (...) {
+	catch (...) {
 		cout << "Se produjo un error" << endl;
 	}
-}
 
+	*/
+
+}

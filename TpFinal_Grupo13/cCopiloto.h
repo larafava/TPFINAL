@@ -1,15 +1,12 @@
 #pragma once
-#include <iostream>
 #include "cPiloto.h"
-
-using namespace std;
 
 class cCopiloto:
 	public cPiloto
 {
 public:
 #pragma region Constructor y destructor
-	cCopiloto(string _nombre, string _apellido, int _DNI, int _codigoempleado);
+	cCopiloto(cAvion* _avion, string _nombre, string _apellido, int _DNI);
 	~cCopiloto();
 #pragma endregion
 

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 
 using namespace std; 
 
@@ -11,7 +12,7 @@ protected:
 public:
 #pragma region Constructores y destructores
   cPersona(string _nombre, string _apellido, int _DNI);
-	~cPersona();
+  ~cPersona();
 #pragma endregion
 
 #pragma region Virtual

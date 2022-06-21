@@ -1,8 +1,5 @@
 #pragma once
-#include <iostream>
 #include "cPasajero.h"
-
-using namespace std;
 
 class cTurista :
 	public cPasajero
