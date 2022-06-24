@@ -54,6 +54,12 @@
     <ClCompile Include="cIata.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cCodigo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cEventos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cLista.h">
@@ -93,6 +99,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cIata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cCodigo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cEventos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

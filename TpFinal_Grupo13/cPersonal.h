@@ -15,15 +15,16 @@ class cPersonal:
 {
 protected:
 	cAvion* avionasociado;
-	const int codigoempleado;
+	 int codigoempleado;
 	static int contcodigo;
 
 public:
-	//constructor
-	cPersonal(cAvion* _avion, string _nombre, string _apellido, int _DNI);
+	
+	cPersonal(cAvion* _avion, string _nombre, string _apellido, int _DNI, int _codigoempleado);
 	~cPersonal();
+	static void inicializarcont();
 	string to_string();
-	//getter y setter codigo empleado
+	cAvion* getavion() { return this->avionasociado; };
 };
 
 #endif

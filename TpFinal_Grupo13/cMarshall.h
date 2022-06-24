@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CMARSHALL_H
+#define CMARSHALL_H
 #include <iostream>
 #include "cPersonal.h"
 
@@ -10,7 +11,7 @@ class cMarshall:
 {
 public:
 #pragma region Constructor y destructor
-	cMarshall(cAvion* _avion, string _nombre, string _apellido, int _DNI);
+	cMarshall(cAvion* _avion, string _nombre, string _apellido, int _DNI, int _codigoempleado);
 	~cMarshall();
 #pragma endregion
 
@@ -18,5 +19,7 @@ public:
 	string to_string();
 	cPasajero* arrebatopasajero(cPasajero* pasajero);
 	void Imprimir();
-	
+#pragma endregion
 };
+
+#endif

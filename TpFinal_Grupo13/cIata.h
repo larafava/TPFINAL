@@ -1,19 +1,19 @@
-#pragma once
+#ifndef CIATA_H
+#define CIATA_H
 #include "cLista.h"
 
 class cMarshall;
 class cPasajero;
 class cAvion;
+class cCodigo;
 
 class cIata {
 private:
 	
-	cLista<string>* Listacodigo;
-//	cLista<cAvion>* ListaAvion;
-	const int cantmaxaviones;
+	cLista<cCodigo>* Listacodigo;
+
 
 public:
-	static int cantAviones;
 #pragma region Constructor y destructor
 	cIata();
 	~cIata();
@@ -21,12 +21,13 @@ public:
 
 	
 #pragma region Metodos
-	void generarcodigovuelo(cAvion*avion);
+	//void generarcodigovuelo(cAvion*avion); No se necesita realizar esta funcion ya que el tp se enfoca mas en los codigos de pasajeros y marshall
 	void Imprimir();
-	//string to_string();
-	int AgregarAvion(cAvion* avion);
-	bool chequearcodigo(string codigo);
-	void Agregarcodigo(string codigo);
+	 bool chequearcodigo(cCodigo* codigo);
+	void Agregarcodigo(cCodigo* codigo);
 	void ReservarAsientoMarshall(cAvion*avionasignado, cMarshall*marshall);
+
 #pragma endregion
 };
+
+#endif

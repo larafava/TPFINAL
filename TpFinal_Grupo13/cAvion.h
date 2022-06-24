@@ -6,7 +6,8 @@
 #include <iostream>
 #include "cLista.h"
 #include "cPasajero.h"
-//#include "cIata.h"
+#include "cIata.h"
+#include "cAzafatas.h"
 //#include "cCopiloto.h"
 
 class cMarshall;
@@ -14,6 +15,9 @@ class cAzafatas;
 class cCopiloto;
 class cPersonal;
 class cPiloto;
+class cIata;
+class cEventos;
+
 
 class cAvion {
 
@@ -23,13 +27,17 @@ private:
 	cLista<cPersonal>* ListaPersonal; 
 	cLista<cPasajero>* ListaPasajeros;
 	cLista<cPasajero>* ListaPasajerosdetenidos;
-	cLista<string>* evento;
+	cLista<cEventos>* evento;
+	bool volando;
 
 #pragma endregion
-
+	cIata* Iata;
+	cPiloto* piloto;
+	cCopiloto* copiloto;
+	cMarshall* marshall;
 public:
 #pragma region Constructor y destructor
-	cAvion();
+	cAvion(bool _volando);
 	~cAvion();
 #pragma endregion
 
@@ -40,19 +48,23 @@ public:
 	void AgregarPasajero(cPasajero* pasajero);
 	bool lugarprision();
 	cLista<cPasajero>* getlistapasajero() { return this->ListaPasajeros; };
-	void insertarevento(string eventos);
+	void insertarevento(cEventos* eventos);
 	cMarshall* getmarshall();
 	cMarshall* AsignarMarshall();
 	void aviondespegue();
+	void avionaterrizaje();
 	cAzafatas* AsignarAzafata();
-	int AgregarAzafata(cAzafatas*azafatas);
+	void AgregarAzafata(cPersonal*azafatas);
 	void setPiloto(cPiloto* piloto);
 	void setCopiloto(cCopiloto* copiloto);
+	void setVolando(bool vuela);
 	cPiloto* getPiloto(); 
 	cCopiloto* getCopiloto();
 	string to_string();
 	void Imprimir();
 	void RecibirCodigo(cPasajero*pasajero);// chequeo que este en la lista de codigos validos
+	void ImprimirListas();
+
 #pragma endregion
 };
 

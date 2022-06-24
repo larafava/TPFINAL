@@ -1,75 +1,88 @@
 // TpFinal_Grupo13.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 #include <iostream>
-/*
+#include "cPiloto.h"
+#include "cIata.h"
 #include "cTurista.h"
 #include "cEjecutivo.h"
 #include "cPrimeraClase.h"
 #include "cMarshall.h"
 #include "cAzafatas.h"
-#include "cPiloto.h"
 #include "cCopiloto.h"
-#include "cIata.h"
 #include "cAvion.h"
 #include <stdlib.h>
 #include <ctime>
-*/
+
+class cTurista;
 
 int main()
 {
-	/*
 	//creo pasajeros, aviones, azafatas, pilotos y copilotos para implementar luego las funciones
-	try
-	{
+	try {
 		cout << "Imprimo los pasajeros: \n";
 		cTurista* pasajero1 = new cTurista("Pedro", "Lopez", 18436114, "TU1843611422A");
 		cEjecutivo* pasajero2 = new cEjecutivo("Marta", "Sanchez", 44417808, "BS4441780833B");
 		cPrimeraClase* pasajero3 = new cPrimeraClase("Maria", "Corso", 44684941, "PC4468494144C");
-		cTurista* pasajero4 = new cTurista("Guadalupe", "Bares", 40948573, "TU4094857355D");
-		cEjecutivo* pasajero5 = new cEjecutivo("Martin", "Hernandez", 42394857, "BS4239485730L");
-		cPrimeraClase* pasajero6 = new cPrimeraClase("Julieta", "Demner", 38749201, "PC387420166F");
 		pasajero1->Imprimir();
 		pasajero2->Imprimir();
 		pasajero3->Imprimir();
-		pasajero4->Imprimir();
-		pasajero5->Imprimir();
-		pasajero6->Imprimir();
 
 		cout << "Imprimo los datos de Marshall: \n";
-		cMarshall* marshall = new cMarshall("Pepe", "Fava", 43935274, 34888990);
-		cMarshall* marshall2 = new cMarshall("Juan Ignacio", "Canon", 27837237, 57392640);
+		cMarshall* marshall = new cMarshall(,"Pepe", "Fava", 43935274, 34888990);
 		marshall->Imprimir();
-		marshall2->Imprimir();
 
 		cout << "Imprimo las azafatas: \n";
-		cAzafatas* Azafata1 = new cAzafatas("Martina", "Quiroga", 40654398, 2837819);
+		cAzafatas* azafata1 = new cAzafatas("Martina", "Quiroga", 40654398, 2837819);
 		cAzafatas* azafata2 = new cAzafatas("Justina", "Santiago", 38764985, 37545434);
 		cAzafatas* azafata3 = new cAzafatas("Sol", "Cambiaso", 35874291, 23948371);
-		cAzafatas* azafata4 = new cAzafatas("Juana", "Abadie", 37894249, 62918274);
-		Azafata1->Imprimir();
+		azafata1->Imprimir();
 		azafata2->Imprimir();
 		azafata3->Imprimir();
-		azafata4->Imprimir();
 
 		cout << "Imprimo piloto: \n";
 		cPiloto* piloto = new cPiloto("Agustin", "Gomez", 30457629, 9823473);
-		cPiloto* piloto2 = new cPiloto("Fernando", "Rodriguez", 31093262, 49203751);
 		piloto->Imprimir();
-		piloto2->Imprimir();
 
 		cout << "Imprimo copiloto: \n";
 		cCopiloto* copiloto = new cCopiloto("Juan", "Panero", 29837498, 23632048);
-		cCopiloto* copiloto2 = new cCopiloto("Nicolas", "Arana", 31981230, 71928317);
 		copiloto->Imprimir();
-		copiloto2->Imprimir();
-
-		cIata::cantAviones = 0;
 
 		cIata* iata = new cIata();
+		cAvion* avion1 = new cAvion(true);
+		
+		//voy agregando las azafatas, piloto, copiloto, pasajeros al avion
+		avion1->AgregarAzafata(azafata1);
+		avion1->AgregarAzafata(azafata2);
+		avion1->AgregarAzafata(azafata3);
+		avion1->setPiloto(piloto);
+		avion1->setCopiloto(copiloto);
+		avion1->AgregarPasajero(pasajero1);
+		avion1->AgregarPasajero(pasajero2);
+		avion1->AgregarPasajero(pasajero3);
+		iata->ReservarAsientoMarshall(avion1, marshall); //iata le debe reservar un asiento que no este ocupado
+		avion1->checkin(); //revisar que todos los codigos de la lista de pasajeros sean validos
+		cLista<cPasajero>* listapasajero = avion1->getlistapasajero();
 
-		cAvion* avion1 = new cAvion();
-		cAvion* avion2 = new cAvion();
+		cAzafatas* azafata = piloto->getavion()->AsignarAzafata();
+		piloto->AnunciosAltavoz();
+		piloto->PilotearAvion(avion1);
+		azafata->AtenderLlamadosPiloto(piloto);
+		piloto->PedirComidaoBebida(azafata);
+		piloto->getavion()->insertarevento( piloto->to_string() + "Hizo anuncios por altavoz" + "Pilotea el avion" + avion1->to_string() + "Pidio bebida sin alcohol" + "Azafata asignada" + azafata->to_string()); //guardo los eventos de piloto
 
+
+
+		delete avion1;//elimina el avion y a su vez se encarga de eliminar pasajeros, pilotos,copilotos, marshall y azafatas
+	}
+	catch (...) {
+		throw("Se produjo un error");
+	}
+	/*
+	//creo pasajeros, aviones, azafatas, pilotos y copilotos para implementar luego las funciones
+	try
+	{
+		
+	
 		//voy agregando las azafatas, piloto, copiloto, pasajeros al avion
 		avion1->AgregarAzafata(Azafata1);
 		avion1->AgregarAzafata(Azafata1);
@@ -113,7 +126,7 @@ int main()
 					}
 				}
 				if (rand() % 6 + 1 == 2) {
-					if (pasajero->esejecutivo()) {
+					try {
 						cEjecutivo* ejecutivo = dynamic_cast<cEjecutivo*>(pasajero);
 						cAzafatas* azafata = ejecutivo->getavion()->AsignarAzafata();//Guardo la azafata asignada del avion
 						azafata->AtenderLlamadosCliente(ejecutivo); //las azafatas no tienen eventos por si mismas sino que atienden los eventos de los pasajeros y pilotos
@@ -122,6 +135,9 @@ int main()
 						ejecutivo->getavion()->insertarevento("El pasajero:" + ejecutivo->to_string() + "pidio Champagne" + "Azafata asignada" + azafata->to_string()); //guardo los eventos que suceden con ejecutivo
 						ejecutivo->HacerseMasaje(azafata);
 						ejecutivo->getavion()->insertarevento("El pasajero:" + ejecutivo->to_string() + "Pidio que le hagan masajes" + "Azafata asignada" + azafata->to_string());
+					}
+					catch(exception*ex){
+					throw("Excepcion")
 					}
 				}
 				if (rand() % 6 + 1 == 3) {

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CAZAFATA_H
+#define CAZAFATA_H
 #include <iostream>
 #include "cPersonal.h"
 #include "cPasajero.h"
@@ -10,7 +11,7 @@ class cAzafatas :
 {
 public:
 #pragma region Constructor y destructor
-	cAzafatas(cAvion* _avion, string _nombre, string _apellido, int _DNI);
+	cAzafatas(cAvion* _avion, string _nombre, string _apellido, int _DNI, int _codigoempleado);
 	~cAzafatas();
 #pragma endregion
 
@@ -22,3 +23,4 @@ public:
 	string to_string();
 #pragma endregion
 };
+#endif

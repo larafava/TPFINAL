@@ -1,4 +1,8 @@
-#pragma once
+
+#ifndef CPILOTO_H
+#define CPILOTO_H
+
+
 #include <iostream>
 #include "cPersonal.h"
 
@@ -11,7 +15,7 @@ class cPiloto:
 
 public:
 #pragma region Constructor y destructor
-	cPiloto(cAvion* _avion, string _nombre, string _apellido, int _DNI);
+	cPiloto(cAvion* _avion, string _nombre, string _apellido, int _DNI, int _codigoempleado);
 	~cPiloto();
 #pragma endregion
 
@@ -23,3 +27,5 @@ public:
 	string to_string();
 #pragma endregion
 };
+
+#endif

@@ -26,13 +26,14 @@ void cPasajero::IralBanioyVolver()
 	cout << "Va al baño y vuelve" << endl;
 }
 string cPasajero::to_string() {
-	return "El nombre del pasajero es: " + this->nombre +"\n"+ "El apellido del pasajero es: \n" + this->apellido + std::to_string(this->DNI) + "" + this->codigo + "";
+	return "El nombre del pasajero es: " + this->nombre +"\n"+ "El apellido del pasajero es: " + this->apellido +"\nEl dni es: "+ std::to_string(this->DNI) + "\nEl codigo es: " + this->codigo + "";
 }
 
-string cPasajero:: PresentarCodigo() {
-	return this->codigo;
+cCodigo* cPasajero:: PresentarCodigo() {
+	return new cCodigo(this->codigo);
 }
 
 void cPasajero::cometerdelito()
 {
+	cout << "Cometio delito" << endl;
 }

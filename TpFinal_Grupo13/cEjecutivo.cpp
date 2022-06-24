@@ -9,9 +9,7 @@ cEjecutivo::~cEjecutivo()
 {
 }
 
-bool cEjecutivo::esejecutivo() {
-	return true;
-}
+
 
 void cEjecutivo::Imprimir() {
 	cout << to_string() << endl;
@@ -31,4 +29,5 @@ void cEjecutivo::PedirChampagne(cAzafatas* azafata) {
 
 void cEjecutivo::generarcodigo()
 {
+	this->codigo = "BS" + this->DNI + this->fila + this->asiento;
 }

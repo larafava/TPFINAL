@@ -2,38 +2,43 @@
 
 using namespace std;
 
-cIata::cIata():cantmaxaviones(100) {
-	Listacodigo = NULL;
+cIata::cIata() {
+
 }
 
 cIata::~cIata()
 {
+	if (this->Listacodigo != NULL) {
+		delete this->Listacodigo;
+		this->Listacodigo = NULL;
+	}
 }
 
-void cIata::generarcodigovuelo(cAvion* avion)
-{
-}
 
 void cIata::Imprimir()
 {
+	cout << (*Listacodigo);
 }
 
-int cIata::AgregarAvion(cAvion* avion)
+
+
+bool cIata::chequearcodigo(cCodigo* codigo)
 {
-	return 0;
+	if (this->Listacodigo->BuscarAtPos(codigo) > -1)
+		return true;
+	else
+		return false;
+	
 }
 
-bool cIata::chequearcodigo(string codigo)
+void cIata::Agregarcodigo(cCodigo* codigo)
 {
-	return false;
-}
-
-void cIata::Agregarcodigo(string codigo)
-{
-	//if (this->Listacodigo->BuscarAtPos(&codigo) == -1 && chequearcodigo()) // en buscaratpos retorna - 1 si no esta, por lo tanto estoy chequeando que no este en otra lista
-		//this->Listacodigo->Insertar(codigo);
+	if (this->Listacodigo->BuscarAtPos(codigo) == -1 && chequearcodigo(codigo)) // en buscaratpos retorna - 1 si no esta, por lo tanto estoy chequeando que no este en otra lista
+		this->Listacodigo->Insertar(codigo);
 }
 
 void cIata::ReservarAsientoMarshall(cAvion* avionasignado, cMarshall* marshall)
 {
 }
+
+

@@ -10,15 +10,7 @@ cTurista::~cTurista()
 {
 }
 
-bool cTurista::esejecutivo()
-{
-	return false;
-}
 
-bool cTurista::esprimeraclase()
-{
-	return false;
-}
 
 void cTurista::Imprimir() {
 	cout << to_string() << endl;
@@ -26,4 +18,5 @@ void cTurista::Imprimir() {
 
 void cTurista::generarcodigo()
 {
+	this->codigo = "TU" + this->DNI + this->fila + this->asiento;
 }

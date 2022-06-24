@@ -11,9 +11,6 @@ public:
 #pragma endregion
 
 #pragma region Metodos
-	bool esturista() { return true; };
-	bool esejecutivo();
-	bool esprimeraclase();
 	void Imprimir();
 	void generarcodigo();
 #pragma endregion

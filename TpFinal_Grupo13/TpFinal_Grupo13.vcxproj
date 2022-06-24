@@ -141,8 +141,10 @@
   <ItemGroup>
     <ClCompile Include="cAvion.cpp" />
     <ClCompile Include="cAzafatas.cpp" />
+    <ClCompile Include="cCodigo.cpp" />
     <ClCompile Include="cCopiloto.cpp" />
     <ClCompile Include="cEjecutivo.cpp" />
+    <ClCompile Include="cEventos.cpp" />
     <ClCompile Include="cIata.cpp" />
     <ClCompile Include="cMarshall.cpp" />
     <ClCompile Include="cPasajero.cpp" />
@@ -156,8 +158,10 @@
   <ItemGroup>
     <ClInclude Include="cAvion.h" />
     <ClInclude Include="cAzafatas.h" />
+    <ClInclude Include="cCodigo.h" />
     <ClInclude Include="cCopiloto.h" />
     <ClInclude Include="cEjecutivo.h" />
+    <ClInclude Include="cEventos.h" />
     <ClInclude Include="cIata.h" />
     <ClInclude Include="cLista.h" />
     <ClInclude Include="cMarshall.h" />

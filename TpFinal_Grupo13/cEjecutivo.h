@@ -12,9 +12,6 @@ public:
 #pragma endregion
 
 #pragma region Metodos
-	//bool esturista();
-	bool esejecutivo();
-	//bool esprimeraclase();
 	void Imprimir();
 	void HacerseMasaje(cAzafatas*azafata);
 	void PedirChampagne(cAzafatas*azafata);
