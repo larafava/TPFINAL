@@ -6,6 +6,7 @@ using namespace std;
 
 class cEventos
 {
+public:
 	string eventos;
 
 	cEventos(string _eventos);
@@ -13,6 +14,7 @@ class cEventos
 
 	void setevento(string evento);
 	string getevento() { return this->eventos; };
+	string to_string();
 
 };
 

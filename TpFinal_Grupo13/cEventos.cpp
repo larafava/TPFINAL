@@ -9,3 +9,8 @@ cEventos::cEventos(string _codigo) {
 void cEventos::setevento(string evento) {
 	eventos = evento;
 }
+
+string cEventos::to_string()
+{
+	return this->eventos;
+}

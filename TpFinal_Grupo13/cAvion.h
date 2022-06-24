@@ -8,6 +8,7 @@
 #include "cPasajero.h"
 #include "cIata.h"
 #include "cAzafatas.h"
+#include "cEventos.h"
 //#include "cCopiloto.h"
 
 class cMarshall;
@@ -17,6 +18,7 @@ class cPersonal;
 class cPiloto;
 class cIata;
 class cEventos;
+class cCodigo;
 
 
 class cAvion {
@@ -35,6 +37,7 @@ private:
 	cPiloto* piloto;
 	cCopiloto* copiloto;
 	cMarshall* marshall;
+	cAzafatas* azafatadisponible;
 public:
 #pragma region Constructor y destructor
 	cAvion(bool _volando);
@@ -48,6 +51,7 @@ public:
 	void AgregarPasajero(cPasajero* pasajero);
 	bool lugarprision();
 	cLista<cPasajero>* getlistapasajero() { return this->ListaPasajeros; };
+	cLista<cEventos>* getlistaeventos() { return this->evento; };
 	void insertarevento(cEventos* eventos);
 	cMarshall* getmarshall();
 	cMarshall* AsignarMarshall();

@@ -20,7 +20,8 @@ void cPiloto::PilotearAvion(cAvion* avion)
 
 void cPiloto::PedirComidaoBebida(cAzafatas* azafata)
 {
-	azafata->AtenderLlamadosPiloto(this);
+	//azafata->EntregarComidayBebida();
+	cout << "El piloto pidio comida y bebida";
 
 }
 

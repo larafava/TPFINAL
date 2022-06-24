@@ -21,7 +21,8 @@ void cAzafatas::AtenderLlamadosCliente(cPasajero* pasajero)
 
 void cAzafatas::AtenderLlamadosPiloto(cPiloto* piloto)
 {
-	piloto->PedirComidaoBebida(this);
+
+		piloto->PedirComidaoBebida(this);
 }
 
 void cAzafatas::EntregarComidayBebida(cPasajero* pasajero)

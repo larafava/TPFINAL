@@ -1,6 +1,7 @@
 #ifndef CIATA_H
 #define CIATA_H
 #include "cLista.h"
+#include "cPasajero.h"
 
 class cMarshall;
 class cPasajero;

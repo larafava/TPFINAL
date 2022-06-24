@@ -17,7 +17,7 @@ string cMarshall::to_string()
 cPasajero* cMarshall::arrebatopasajero(cPasajero* pasajero)
 {
 	cPasajero* tor = NULL;
-	int pospasajero = this->avionasociado->getlistapasajero()->BuscarAtPos(pasajero);
+	int pospasajero = this->avionasociado->getlistapasajero()->BuscarAtPos(pasajero); //guardo en una variable la posicion del pasajero
 	if (pospasajero > -1 && this->avionasociado->lugarprision()) {
 		this->avionasociado->getlistapasajero()->Eliminar(pospasajero);
 		tor = pasajero;

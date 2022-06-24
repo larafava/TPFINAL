@@ -12,7 +12,7 @@ public:
 	~cCodigo();
 	void setcodigo(string codigoo);
 	string getcodigo() { return this->codigo; };
-	
+	string to_string();
 };
 
 #endif

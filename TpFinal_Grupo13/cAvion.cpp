@@ -88,28 +88,31 @@ cMarshall* cAvion::getmarshall()
 
 cMarshall* cAvion::AsignarMarshall()
 {
-	//this->marshall = _marshall;
+	return this->marshall;
 }
 
 
 cAzafatas* cAvion::AsignarAzafata() //se le asigna una azafata al avion
 {
-	return nullptr;
+	cPersonal*asignarazafata= ListaPersonal->Buscar(0);
+	cAzafatas* azafata = dynamic_cast<cAzafatas*>(asignarazafata);
+	return this->azafatadisponible;
 }
 
 void cAvion::AgregarAzafata(cPersonal* azafatas) //se agrega azafata que esta dentro de la lista de personal al avion
 {
+	//Aca tira una excepcion y no se porque
+	//cPersonal* personal = azafatas; //se crea una nueva azafata del tipo personal
+	/*try {//hago un try catch por si no se pudo hacer el dynamic cast correctamente y por lo tanto no se pudo agregar azafata
 	
-	cPersonal* personal = azafatas; //se crea una nueva azafata del tipo personal
-	try {//hago un try catch por si no se pudo hacer el dynamic cast correctamente y por lo tanto no se pudo agregar azafata
-		cAzafatas* azafata = dynamic_cast<cAzafatas*>(azafatas);
-		if (this->ListaPersonal->BuscarAtPos(personal) == -1) // en buscaratpos retorna - 1 si no esta, por lo tanto estoy chequeando que no este en otra lista
-
 			 this->ListaPersonal->Insertar(azafatas);
 	} 
-	catch (exception*x) {
-		cout << "Fallo dynamic cast, no se pudo agregar azafata" << endl;
-	}
+	catch (...) {
+		cout << "no se pudo agregar azafata" << endl;
+	}*/
+	cAzafatas* azafata = dynamic_cast<cAzafatas*>(azafatas);
+	this->azafatadisponible = azafata;
+	
 }
 
 void cAvion::setPiloto(cPiloto* piloto)
@@ -155,7 +158,7 @@ void cAvion::RecibirCodigo(cPasajero* pasajero)
 	}
 }
 
-void cAvion::ImprimirListas()
+void cAvion::ImprimirListas()//imprimimos las listas creadas
 {
 	cout << (*ListaPasajeros);
 	cout << (*ListaPasajerosdetenidos);
